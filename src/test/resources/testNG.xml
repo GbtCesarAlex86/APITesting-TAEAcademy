@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MainSuite">
+    <test name="Trying to get a Person">
+        <parameter name="personId" value="2"/>
+        <parameter name="skinColor" value="gold"/>
+        <parameter name="filmCount" value="6"/>
+        <classes>
+            <class name="com.globant.tests.PeopleTest"/>
+        </classes>
+    </test>
+</suite>
