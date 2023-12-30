@@ -10,13 +10,10 @@ public class PeopleService {
 
     private static final String PEOPLE_ENDPOINT = "people/";
 
-    public Person getPerson(int id) {
-        Response response = given()
+    public Response getPerson(int id) {
+        return given()
                 .baseUri(BASE_URL)
                 .get(PEOPLE_ENDPOINT + id);
-
-        return response.as(Person.class);
     }
-
 
 }
