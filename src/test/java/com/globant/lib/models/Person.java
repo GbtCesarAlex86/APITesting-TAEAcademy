@@ -1,17 +1,31 @@
 package com.globant.lib.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class Person {
     private String name;
     private String height;
     private String mass;
+
+    @SerializedName("hair_color")
     private String hairColor;
+
+    @SerializedName("skin_color")
     private String skinColor;
+
+    @SerializedName("eye_color")
     private String eyeColor;
+
+    @SerializedName("birth_year")
     private String birthYear;
+
     private String gender;
+
+    @SerializedName("homeworld")
     private String homeWorld;
+
     private List<String> films;
     private List<String> species;
     private List<String> vehicles;
