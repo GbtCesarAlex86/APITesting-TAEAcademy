@@ -1,6 +1,5 @@
 package com.globant.lib.services;
 
-import com.globant.lib.models.Person;
 import io.restassured.response.Response;
 
 import static com.globant.utils.Constants.BASE_URL;
@@ -15,5 +14,4 @@ public class PeopleService {
                 .baseUri(BASE_URL)
                 .get(PEOPLE_ENDPOINT + id);
     }
-
 }

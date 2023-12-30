@@ -13,6 +13,4 @@ public class MainService {
     public PlanetService createPlanetService(){
         return new PlanetService();
     }
-
-
 }
