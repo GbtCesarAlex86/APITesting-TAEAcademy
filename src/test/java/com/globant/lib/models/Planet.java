@@ -1,6 +1,8 @@
 package com.globant.lib.models;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Planet {
     private String name;
@@ -68,10 +70,9 @@ public class Planet {
         this.gravity = gravity;
     }
 
-    public String getTerrain() {
-        return terrain;
+    public List<String> getTerrain() {
+        return Arrays.asList(terrain.split(", "));
     }
-
     public void setTerrain(String terrain) {
         this.terrain = terrain;
     }
@@ -130,5 +131,30 @@ public class Planet {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Planet planet = (Planet) obj;
+        return Objects.equals(name, planet.name)
+                && Objects.equals(rotation_period, planet.rotation_period)
+                && Objects.equals(orbital_period, planet.orbital_period)
+                && Objects.equals(diameter, planet.diameter)
+                && Objects.equals(climate, planet.climate)
+                && Objects.equals(gravity, planet.gravity)
+                && Objects.equals(terrain, planet.terrain)
+                && Objects.equals(surface_water, planet.surface_water)
+                && Objects.equals(population, planet.population)
+                && Objects.equals(residents, planet.residents)
+                && Objects.equals(films, planet.films)
+                && Objects.equals(created, planet.created)
+                && Objects.equals(edited, planet.edited)
+                && Objects.equals(url, planet.url);
     }
 }
